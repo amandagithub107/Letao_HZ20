@@ -1,0 +1,14 @@
+.bg_color {
+  /*background-color: #222D32;*/
+  background-color: indianred;
+}
+
+.mt_150 {
+  margin-top: 150px;
+}
+
+.panel-title {
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+}
