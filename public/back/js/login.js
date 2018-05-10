@@ -61,7 +61,7 @@ $(function () {
     data: $('#form').serialize(),
     success: function ( info ) {
       if(info.success){
-        alert("登陆成功");
+        // alert("登陆成功");
         location.href = "index.html";
       }
       if(info.error === 1001) {
