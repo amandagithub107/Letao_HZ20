@@ -31,6 +31,7 @@ $(function() {
         // 渲染页面
         $('.lt_content tbody').html( htmlStr );
 
+        
         // 进行分页插件配置
         $('#paginator').bootstrapPaginator({
           // 指定bootstrap版本
