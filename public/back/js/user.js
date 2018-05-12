@@ -48,6 +48,37 @@ $(function () {
    })
  }
   
+  // 2.点击启用禁用按钮，显示模态框，通过事件委托做
+  $('.lt_content tbody').on('click', '.btn', function () {
+    // console.log('hehe');
+    $('#userModal').modal("show");
+    
+    //用户id
+    var id = $(this).parent().data("id");
+    //用户状态,可以根据当前按钮的类名，判断需要将用户设置成什么状态
+    var isDelete = $(this).hasClass("btn-success") ? 1 : 0;
+    // console.log(isDelete);
+    //3.添加点击事件，让某个用户启用禁用
+    //off()事件解绑 可以将之前重复注册的事件移除，再进行事件绑定，可以保证只有一个事件
+    $('#submitBtn').off().click(function () {
+      //console.log( id, isDelete );
+      $.ajax({
+        type: "post",
+        url: "/user/updateUser",
+        data: {
+          id: id,
+          isDelete: isDelete
+        },
+        success: function (info) {
+          console.log(info);
+          $('#userModal').modal("hide");
+          render();
+        }
+      })
+      
+    })
+    
+  });
   
   
   
