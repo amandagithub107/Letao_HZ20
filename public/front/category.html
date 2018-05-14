@@ -5,18 +5,17 @@
   <title>乐淘商城</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="./lib/mui/css/mui.css">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/category.css">
 </head>
 <body>
 
-
-<!-- 整体区域, 全屏容器 -->
+<!--全屏容器-->
 <div class="lt_container">
-  <!-- 头部 -->
+  
+  <!--头部-->
   <div class="lt_header">
     <a href="index.html" class="icon_left">
       <i class="fa fa-home"></i>
@@ -26,16 +25,15 @@
       <i class="fa fa-search"></i>
     </a>
   </div>
-
-
-  <!-- 主体部分 -->
+  
+  <!--主体部分-->
   <div class="lt_main">
-    <!-- 需要有两个区域滚动 -->
+    <!--两个区域滚动-->
     <div class="lt_category_left">
       <div class="mui-scroll-wrapper">
         <div class="mui-scroll">
           <ul>
-            <!-- 挖了个坑 -->
+            <!--挖个坑-->
           </ul>
         </div>
       </div>
@@ -43,7 +41,7 @@
     <div class="lt_category_right">
       <div class="mui-scroll-wrapper">
         <div class="mui-scroll">
-          <ul class="mui-clearfix">
+          <ul>
             <li>
               <a href="#">
                 <img src="./images/brand1.png" alt="">
@@ -80,7 +78,6 @@
                 <p>耐克</p>
               </a>
             </li>
-
             <li>
               <a href="#">
                 <img src="./images/brand1.png" alt="">
@@ -117,7 +114,12 @@
                 <p>耐克</p>
               </a>
             </li>
-
+            <li>
+              <a href="#">
+                <img src="./images/brand1.png" alt="">
+                <p>耐克</p>
+              </a>
+            </li>
             <li>
               <a href="#">
                 <img src="./images/brand1.png" alt="">
@@ -159,13 +161,13 @@
       </div>
     </div>
   </div>
-
-
-  <!-- 底部 -->
+  
+  
+  <!--底部-->
   <div class="lt_footer">
     <ul>
       <li>
-        <a href="index.html">
+        <a href="index.html" >
           <i class="fa fa-home"></i>
           <p>首页</p>
         </a>
@@ -189,9 +191,14 @@
         </a>
       </li>
     </ul>
+  
+  
+  
   </div>
 </div>
 
+
+<!--侧边栏模板-->
 <script type="text/html" id="leftTpl">
   {{ each rows v i }}
     <li><a href="#" data-id="{{ v.id }}" class="{{ i === 0 ? 'current' : '' }}">{{ v.categoryName }}</a></li>
@@ -199,12 +206,12 @@
 </script>
 
 
+
+
 <script src="./lib/mui/js/mui.min.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
 <script src="js/category.js"></script>
-
-
 </body>
 </html>
